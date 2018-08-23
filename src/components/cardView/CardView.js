@@ -1,9 +1,10 @@
 import React from 'react'
 import './cardView.css'
+import {Link} from 'react-router-dom';
 class CardView extends React.Component{
     render() {
       return (
-        <div className="card-view">
+        <Link to={"/product/" + this.props.id}className="card-view">
           <div className="image-container" >
               <img src={this.props.image} alt="Current Product" />
           </div>
@@ -12,7 +13,7 @@ class CardView extends React.Component{
               <h5>{this.props.product}</h5>
               <p>${this.props.price}</p>
           </div>
-        </div>
+        </Link>
       )
     }
 }

@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-import {Switch, Route, Link} from 'react-router-dom';
+import {Switch, Route} from 'react-router-dom';
 import './app.css'
 
 //COMPONENTS
 import About from './components/about/About'
 import Terms from './components/terms/Terms'
+import All from './components/all/All'
 import Header from './components/header/Header'
 import Category from './components/category/Category'
+import Product from './components/product/Product'
+
 
 //RESOURCES
 import logo_black from './images/mf-logo-black.svg'
@@ -25,7 +28,9 @@ class App extends Component {
           <Switch>
             <Route exact path="/about" component={About} />
             <Route exact path="/terms" component={Terms} />
+            <Route exact path="/all-products" component={All} />
             <Route path="/category/:nameCategory" component={Category} />
+            <Route path="/product/:id" component={Product} />
           </Switch>
         </div>
 

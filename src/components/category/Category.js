@@ -22,6 +22,7 @@ class Category extends React.Component{
     this.state = {
       backImage: '',
       show: true,
+      counter: 0,
       all: [],
       sale: [],
     }
@@ -337,7 +338,7 @@ class Category extends React.Component{
         <div>
 
           <div className="image-container">
-            <img src={this.state.backImage} width='100%' height='auto'  />
+            <img src={this.state.backImage}/>
           </div>
 
           <div className="title">
@@ -346,23 +347,36 @@ class Category extends React.Component{
           </div>
 
 
-          {this.props.match.params.nameCategory !== 'All' && 
             <div className="buttons">
               <button onClick={this.showAll}  className="all" >All Items</button>
               <button onClick={this.showSale}  className="sale" >On Sale</button>            
+            </div>
+
+          {this.props.match.params.nameCategory !== 'All' &&
+            <div className="itemsShow">
+              {
+                this.state.show === true &&
+                <p className="itemsShow__number" >{this.state.all.length}</p>
+              }
+
+              {
+                this.state.show === false &&
+                <p className="itemsShow__number" >{this.state.sale.length}</p>
+              }
+              <p className="itemsShow__text">Items Showing</p>
             </div>
           }
           
           <div className="viewer">
             {this.state.show === true && 
               this.state.all.map(product =>{
-                return <CardView image={product.imageLink} product={product.item} price={product.price} />
+                return <CardView image={product.imageLink} product={product.item} price={product.price} id={product._id} />
               })
             }
 
             {this.state.show === false && 
               this.state.sale.map(product =>{
-                return <CardView image={product.imageLink} product={product.item} price={product.price} />
+                return <CardView image={product.imageLink} product={product.item} price={product.price} id={product._id} />
               })
             }
           </div>

@@ -9,7 +9,6 @@ class Header extends React.Component{
       super(props);
         this.state = {
             categories:[
-                {key: 0, name:'All'},
                 {key: 1, name:'Seating'},
                 {key: 2, name:'Tables'},
                 {key: 3, name:'Desks'},
@@ -34,6 +33,7 @@ class Header extends React.Component{
           <div className="header__divider"></div>
 
           <div className="header__nav">
+            <Link to="/all-products">All</Link>
             {
                 this.state.categories.map(categoria => {
                   return  <Link to={'/category/' + categoria.name}>{categoria.name}</Link>
