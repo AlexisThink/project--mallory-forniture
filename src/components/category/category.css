@@ -2,17 +2,12 @@
     width: 100%;
     min-height: 300px;
 
-
     font-family: 'Playfair Display', serif;
     color: white;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    background-image: url('../../images/landing-splash-bg.png');
-    background-repeat: no-repeat;
-    background-size: 100% auto;
 }
 
 .image-container p{
@@ -20,6 +15,7 @@
     font-weight: 600;
     margin: 0;
 }
+
 
 .title{
     margin-left: 20px;
@@ -40,26 +36,31 @@
 
 .buttons{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     flex-direction: row;
     flex-wrap: wrap;
-
-    margin-top: 40px;
 }
 
 .buttons button{
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 18px;
-    color: #2196f3;
 
     width: 100px;
     padding: 10px;
     margin: 10px;
 
     border-radius: 5px;
-
-    border: 2px solid #2196f3;
     background-color: white;
+}
+
+.all{
+    color: #F44336;
+    border: 2px solid #F44336;
+}
+
+.sale{
+    color: #999999;
+    border: 2px solid #999999;
 }
 
 .viewer{
@@ -67,5 +68,4 @@
     flex-direction: row;
     flex-wrap: wrap;
 
-    padding: 50px
 }
