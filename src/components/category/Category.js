@@ -40,38 +40,6 @@ class Category extends React.Component{
     })
   }
   
-  allProducts =() =>{
-    this.setState({
-      all: [],
-      sale:[],
-      show: true,
-    })
-    this.setState({
-      backImage:allImage,
-    })   
-
-    var API = 'https://mallory-furniture-admin.now.sh/api/v1/products'
-
-    request
-      .get(API)
-      .then(response =>{
-        var productos = response.body;
-        var allList = [];
-
-        productos.map(producto =>{
-          if(producto.featured === true){
-            allList.push(producto);
-          }
-        })
-
-        this.setState({
-          all: allList,
-        })
-      })
-
-
-  }
-
   seatingProducts = () =>{
     this.setState({
       all: [],

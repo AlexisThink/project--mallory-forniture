@@ -57,12 +57,33 @@ componentWillMount(){
     render() {
       return (
         <div className="viewer" >
-          <div className="viewer__image" >
+          <div className="image" >
             <img src={this.state.image}  />
           </div>
-          <div className="viewer__text" >
-            <h4 className="viewer__text__name"></h4>
-            <p className="viewer__text__price"></p>
+
+          <div className="info">
+
+            <div className="info__top">
+              <h2>{this.state.name}</h2>
+              <p>${this.state.price}</p>
+            </div>
+
+            <div className="info__bottom">
+
+              <div className="info__bottom__condition" >
+                <p>Condition</p>
+                <p>{this.state.condition}</p>
+              </div>
+              <div className="info__bottom__measure" >
+                <p>Measurements</p>
+                <p>W:{this.state.width} L:{this.state.length} H:{this.state.height}</p>
+              </div>
+              <div className="info__bottom__button" >
+                <button> Add to Cart</button>
+              </div>
+
+            </div>
+
           </div>
         </div>
       )
