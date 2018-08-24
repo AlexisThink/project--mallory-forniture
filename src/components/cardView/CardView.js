@@ -1,6 +1,7 @@
 import React from 'react'
 import './cardView.css'
 import {Link} from 'react-router-dom';
+
 class CardView extends React.Component{
     render() {
       return (

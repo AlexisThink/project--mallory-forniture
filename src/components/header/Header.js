@@ -21,9 +21,9 @@ class Header extends React.Component{
     render() {
       return (
         <div className="header">
-          <div className="header__logo">
+          <Link to="/"  className="header__logo">
             <img src={logo}  alt="Mallory Forniture"/>
-          </div>
+          </Link>
 
           <div className="header__info">
             <Link to="/about">About</Link>

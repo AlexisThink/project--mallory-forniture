@@ -6,6 +6,7 @@ import './app.css'
 import About from './components/about/About'
 import Terms from './components/terms/Terms'
 import All from './components/all/All'
+import Home from './components/home/Home'
 import Header from './components/header/Header'
 import Category from './components/category/Category'
 import Product from './components/product/Product'
@@ -26,6 +27,7 @@ class App extends Component {
         
         <div className="container">
           <Switch>
+            <Route exact path="/" component={Home} />
             <Route exact path="/about" component={About} />
             <Route exact path="/terms" component={Terms} />
             <Route exact path="/all-products" component={All} />

@@ -1,24 +1,32 @@
 .image-container{
     width: 100%;
-    min-height: 300px;
-
+    height: 250px;
 
     font-family: 'Playfair Display', serif;
     color: white;
+    position: relative;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    background-image: url('../../images/landing-splash-bg.png');
-    background-repeat: no-repeat;
-    background-size: 100% auto;
 }
 
 .image-container p{
     font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 600;
-    margin: 0;
+    font-weight: 600; 
+    position: absolute;
+}
+
+.image-container__p1{
+    top: 100px;
+}
+
+.image-container__p2{
+    top: 120px;
+}
+
+.image-container h1{
+    position: absolute;
 }
 
 .title{
@@ -41,13 +49,14 @@
 .buttons{
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
 
     margin-top: 40px;
 }
 
-.buttons button{
+.buttons a{
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 18px;
     color: #2196f3;
@@ -56,10 +65,13 @@
     padding: 10px;
     margin: 10px;
 
+    
     border-radius: 5px;
-
     border: 2px solid #2196f3;
     background-color: white;
+
+    text-decoration: none;
+    text-align: center;
 }
 
 .viewer{
